@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <h1>Haz click en los botones</h1>
+    <button class="upperbutton">PONER EN MAYÚSCULAS TÍTULO</button>
+    <br>
+    <br>
+    <br>
+    <button class="special">PONER ROJO EL TÍTULO</button>
+    <button class="special">PONER ROJO EL TÍTULO</button>
+    <button class="special">PONER ROJO EL TÍTULO</button>
+    <button class="special">PONER ROJO EL TÍTULO</button>
+    <button class="special">PONER ROJO EL TÍTULO</button>
+
+
+
+    <script>
+
+        // Exercise one
+        const button = document.querySelector('.upperbutton')
+
+        button.onclick = function () {
+
+            const title = document.querySelector('h1')
+            title.style.textTransform = 'uppercase'
+        }
+
+
+        // Exercise two
+        const buttons = document.querySelectorAll('.special')
+
+        for (let i = 0; i < buttons.length; i++) {
+
+            buttons[i].onclick = function () {
+
+                const title = document.querySelector('h1')
+                title.style.color = 'red'
+            }
+        }
+
+    </script>
+</body>
+
+</html>
